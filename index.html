@@ -1,168 +1,708 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nidhi Bde - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f8f9fa; }
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 100px 0; text-align: center; }
-        .hero img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; margin-bottom: 20px; }
-        .section { padding: 60px 0; }
-        .skill-bar { background-color: #e9ecef; border-radius: 10px; height: 10px; margin-bottom: 20px; }
-        .skill-fill { background-color: #667eea; height: 100%; border-radius: 10px; }
-        footer { background-color: #343a40; color: white; padding: 20px 0; text-align: center; }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#hero">Nidhi Bde</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidhi - Clarity-First Growth Consultant</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <img src="profile.jpg" alt="Nidhi Bde"> <!-- Replace with your photo -->
-            <h1>Nidhi Bde</h1>
-            <p class="lead">Data Analyst | Business Intelligence Enthusiast</p>
-            <p>Passionate about turning data into actionable insights. Experienced in analytics, visualization, and driving business decisions.</p>
-            <a href="#contact" class="btn btn-light btn-lg">Get In Touch</a>
-        </div>
-    </section>
+    :root {
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --text-primary: #f0f6fc;
+      --accent-cyan: #58d5e8;
+      --accent-pink: #ff6b9d;
+    }
 
-    <!-- About Section -->
-    <section id="about" class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <p class="text-center">I am a dedicated Data Analyst with a strong background in business intelligence and data-driven decision-making. With experience at leading firms like Infosys and Deloitte, I specialize in SQL, Python, Tableau, and Power BI to uncover insights and optimize processes. I'm always eager to tackle new challenges and collaborate on innovative projects.</p>
-        </div>
-    </section>
+    html, body {
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
 
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Experience</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Deloitte (Data Analyst)</h5>
-                    <p>2022 - Present | Analyzed large datasets to support client strategies, built dashboards in Tableau, and improved reporting efficiency by 30%.</p>
-                </div>
-                <div class="col-md-6">
-                    <h5>Infosys (Business Analyst)</h5>
-                    <p>2020 - 2022 | Conducted data modeling, automated ETL processes, and collaborated on cross-functional teams for project delivery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    .main-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
 
-    <!-- Skills Section nidhi-->
-    <section id="skills" class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>SQL</h5>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Python</h5>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Tableau</h5>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-                </div>
-            </div>
-            <p class="text-center mt-3">Other: Power BI, Excel, Machine Learning, Data Visualization</p>
-        </div>
-    </section>
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Sales Dashboard</h5>
-                    <p>Built an interactive Tableau dashboard for sales data, reducing reporting time by 40%. Includes KPIs and trend analysis.</p>
-                    <a href="#" class="btn btn-primary">View Demo</a> <!-- Link to your project -->
-                </div>
-                <div class="col-md-6">
-                    <h5>Customer Segmentation</h5>
-                    <p>Used Python and clustering algorithms to segment customers, improving targeted marketing campaigns.</p>
-                    <a href="#" class="btn btn-primary">View Code</a> <!-- Link to GitHub -->
-                </div>
-            </div>
-        </div>
-    </section>
+    /* Animated background */
+    .hero-bg {
+      background: linear-gradient(135deg, #0d1117 0%, #1a1f2e 50%, #0d1117 100%);
+      position: relative;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 4rem 2rem;
+    }
 
-    <!-- Education Section -->
-    <section id="education" class="section bg-white">
-        <div class="container">
-            <h2 class="text-center mb-4">Education</h2>
-            <div class="text-center">
-                <h5>IIT Roorkee</h5>
-                <p>B.Tech in Computer Science | 2016 - 2020 | GPA: 8.5/10</p>
-            </div>
-        </div>
-    </section>
+    .animated-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.4;
+      background: radial-gradient(circle at 20% 50%, rgba(88, 213, 232, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 107, 157, 0.15) 0%, transparent 50%);
+      animation: pulse 8s ease-in-out infinite;
+    }
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace with your Formspree URL -->
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-            <p class="text-center mt-3">Or reach me at: <a href="mailto:nidhi.bde@example.com">nidhi.bde@example.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/nidhi-bde/">nidhi-bde</a></p>
-        </div>
-    </section>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.6; }
+    }
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Nidhi Bde. All rights reserved.</p>
-        </div>
-    </footer>
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(88, 213, 232, 0.1);
+      border: 1px solid rgba(88, 213, 232, 0.3);
+      border-radius: 50px;
+      color: var(--accent-cyan);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #8b949e;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--accent-cyan);
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+
+    .phone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(22, 27, 34, 0.8);
+      border: 1px solid rgba(88, 213, 232, 0.3);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin: 1.5rem 0;
+    }
+
+    .phone-badge:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 30px rgba(88, 213, 232, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .phone-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, #4db8c9 100%);
+      color: #000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(88, 213, 232, 0.3);
+      margin-right: 1rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(88, 213, 232, 0.4);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      border: 2px solid var(--accent-cyan);
+      border-radius: 50px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-cyan);
+      color: #000;
+      transform: translateY(-3px);
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      background: var(--bg-dark);
+    }
+
+    .section-alt {
+      background: #0a0e14;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid rgba(88, 213, 232, 0.2);
+      border-radius: 20px;
+      padding: 3rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 10px 40px rgba(88, 213, 232, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: rgba(88, 213, 232, 0.05);
+      border-left: 3px solid var(--accent-cyan);
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      background: rgba(88, 213, 232, 0.1);
+      transform: translateX(10px);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: rgba(88, 213, 232, 0.1);
+      border: 1px solid rgba(88, 213, 232, 0.3);
+      border-radius: 50px;
+      margin: 0.5rem;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: rgba(88, 213, 232, 0.2);
+      border-color: var(--accent-cyan);
+      transform: scale(1.05);
+    }
+
+    .quote-card {
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent-pink);
+      padding: 2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #8b949e;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .value-card {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 107, 157, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .value-card:hover {
+      border-color: var(--accent-pink);
+      box-shadow: 0 10px 40px rgba(255, 107, 157, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .value-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .value-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent-pink);
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+      margin: 4rem auto;
+      max-width: 300px;
+    }
+
+    footer {
+      background: #000;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(88, 213, 232, 0.2);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .footer-link {
+      color: #8b949e;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--accent-cyan);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 { margin-bottom: 2rem; }
+    .mb-6 { margin-bottom: 3rem; }
+    .mt-4 { margin-top: 2rem; }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      .subtitle { font-size: 1.1rem; }
+      .section { padding: 3rem 1.5rem; }
+      .card { padding: 2rem; }
+      .btn-primary, .btn-secondary {
+        display: block;
+        margin: 0.5rem auto;
+        text-align: center;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="main-wrapper"><!-- Hero Section -->
+   <section class="hero-bg">
+    <div class="animated-gradient"></div>
+    <div class="content-container">
+     <div class="badge">
+      ✨ CLARITY-FIRST CONSULTING
+     </div>
+     <h1 id="hero-headline" class="serif">Helping Founders Find Clarity Before They Invest in Growth</h1>
+     <p id="hero-subheadline" class="subtitle">I work with founders and decision-makers who feel overwhelmed by noise, opinions, and sales pitches — and help them identify what truly blocks growth before spending time or money.</p>
+     <p id="hero-tagline" class="tagline">Clarity-first conversations. No pressure. No pitches. Just perspective.</p><a href="tel:+917973409085" class="phone-badge">
+      <svg class="phone-icon" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      </svg><span id="contact-number">+91 797 340 9085</span> </a>
+     <div class="mt-4"><a href="https://calendly.com" target="_blank" rel="noopener noreferrer" id="primary-cta" class="btn-primary">Book a Clarity Call</a> <a href="mailto:nidhi@example.com" id="secondary-cta" class="btn-secondary">Let's Talk</a>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section class="section section-alt">
+    <div class="content-container">
+     <h2 id="about-title" class="text-center serif">Why Most Growth Efforts Fail (And Why Clarity Comes First)</h2>
+     <div class="card">
+      <p class="subtitle" style="font-size: 1.4rem;">Most founders I speak with are not stuck because they lack ideas, talent, or effort.</p>
+      <p class="subtitle" style="font-size: 1.4rem; margin-top: 1.5rem;">They're stuck because they're surrounded by <span style="color: var(--accent-cyan); font-weight: 600;">noise</span> — too many opinions, too many services, too many "solutions" — and very little real clarity.</p>
+      <p style="margin-top: 3rem; margin-bottom: 1.5rem; font-weight: 600; font-size: 1.2rem;">I've seen this repeatedly:</p>
+      <div class="grid-2">
+       <div class="quote-card">
+        Agencies push packages
+       </div>
+       <div class="quote-card">
+        Sales conversations turn into pitches
+       </div>
+       <div class="quote-card">
+        Real business problems stay unheard
+       </div>
+       <div class="quote-card">
+        And growth suffers quietly
+       </div>
+      </div>
+      <div class="text-center mt-4">
+       <p class="subtitle" style="font-size: 1.3rem; color: var(--accent-cyan);">I believe not every problem needs a service. Some problems need clarity first.</p>
+       <p class="serif" style="font-size: 2rem; color: var(--accent-pink); margin-top: 2rem;">That's where I come in.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="divider"></div><!-- Role Section -->
+   <section class="section">
+    <div class="content-container">
+     <h2 id="role-title" class="text-center serif">My Role in Your Growth Journey</h2>
+     <p class="text-center subtitle mb-6" style="font-style: italic;">I don't start with solutions. I start with understanding.</p>
+     <div class="card">
+      <p style="margin-bottom: 2rem; font-weight: 600; font-size: 1.2rem;">My role is to help founders:</p>
+      <ul class="feature-list">
+       <li class="feature-item"><span class="icon">✓</span> <span>Identify what is actually blocking growth</span></li>
+       <li class="feature-item"><span class="icon">✓</span> <span>Separate symptoms from root problems</span></li>
+       <li class="feature-item"><span class="icon">✓</span> <span>Gain clarity on positioning, process, focus, or direction</span></li>
+       <li class="feature-item"><span class="icon">✓</span> <span>Decide what to do — and equally important — what <em>not</em> to do</span></li>
+      </ul>
+      <div class="text-center mt-4" style="padding-top: 2rem; border-top: 1px solid rgba(88, 213, 232, 0.2);">
+       <p class="subtitle" style="font-style: italic;">Sometimes clarity leads to execution. Sometimes it saves you from unnecessary spending.</p>
+       <p class="serif" style="font-size: 2rem; color: var(--accent-cyan); margin-top: 1.5rem; font-weight: 600;">Both outcomes are growth.</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="divider"></div><!-- Who Section -->
+   <section class="section section-alt">
+    <div class="content-container">
+     <h2 id="who-title" class="text-center serif">Who This Is For</h2>
+     <div class="grid-2">
+      <div class="card">
+       <h3 style="font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 1.5rem;">👥 I typically work with:</h3>
+       <ul style="list-style: none;">
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Startup founders and co-founders</li>
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Service-based business owners</li>
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Tech and digital founders</li>
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Decision-makers feeling stuck despite effort</li>
+       </ul>
+      </div>
+      <div class="card">
+       <h3 style="font-size: 1.5rem; color: var(--accent-cyan); margin-bottom: 1.5rem;">💭 If you feel:</h3>
+       <ul style="list-style: none;">
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Confused despite trying multiple solutions</li>
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Pulled in too many directions</li>
+        <li style="margin: 1rem 0; padding-left: 1.5rem; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-pink);">→</span> Pressured to invest without clarity</li>
+       </ul>
+      </div>
+     </div>
+     <p class="text-center serif" style="font-size: 2rem; margin-top: 3rem; font-style: italic;">You're not behind. <span style="color: var(--accent-cyan);">You just need a clearer lens.</span></p>
+    </div>
+   </section>
+   <div class="divider"></div><!-- Skills Section -->
+   <section class="section">
+    <div class="content-container">
+     <h2 class="text-center serif">Core Strengths</h2>
+     <div class="text-center"><span class="skill-tag">Business Development &amp; Sales Strategy</span> <span class="skill-tag">Founder Discovery &amp; Requirement Analysis</span> <span class="skill-tag">Marketing &amp; Growth Consulting</span> <span class="skill-tag">Tech &amp; Digital Solution Understanding</span> <span class="skill-tag">Client Communication &amp; Relationship Building</span> <span class="skill-tag">Cross-team Collaboration</span>
+     </div>
+    </div>
+   </section>
+   <div class="divider"></div><!-- Testimonials Section -->
+   <section class="section section-alt">
+    <div class="content-container">
+     <h2 class="text-center serif">What People Say About Working With Me</h2>
+     <div class="grid-2">
+      <div class="quote-card">
+       "Calm under pressure"
+      </div>
+      <div class="quote-card">
+       "Strong technical understanding"
+      </div>
+      <div class="quote-card">
+       "Clear communicator"
+      </div>
+      <div class="quote-card">
+       "Supportive leader"
+      </div>
+     </div>
+     <div class="quote-card" style="margin-top: 2rem;">
+      "Reliable and solution-oriented"
+     </div>
+    </div>
+   </section>
+   <div class="divider"></div><!-- Values Section -->
+   <section class="section">
+    <div class="content-container">
+     <h2 id="values-title" class="text-center serif">What I Care About</h2>
+     <div class="value-grid">
+      <div class="value-card">
+       <div class="value-icon">
+        🌱
+       </div>
+       <div class="value-title">
+        Environmental Sustainability
+       </div>
+       <p style="color: #8b949e;">Building businesses that respect our planet</p>
+      </div>
+      <div class="value-card">
+       <div class="value-icon">
+        💚
+       </div>
+       <div class="value-title">
+        Health &amp; Well-being
+       </div>
+       <p style="color: #8b949e;">Supporting holistic success for founders</p>
+      </div>
+      <div class="value-card">
+       <div class="value-icon">
+        🎯
+       </div>
+       <div class="value-title">
+        Conscious Leadership
+       </div>
+       <p style="color: #8b949e;">Leading with intention and awareness</p>
+      </div>
+      <div class="value-card">
+       <div class="value-icon">
+        🧘
+       </div>
+       <div class="value-title">
+        Mindful Decision-Making
+       </div>
+       <p style="color: #8b949e;">Choosing clarity over impulsive action</p>
+      </div>
+     </div>
+     <p class="text-center serif" style="font-size: 1.5rem; margin-top: 3rem; font-style: italic; color: #8b949e;">I believe better businesses are built by clearer, more conscious leaders.</p>
+    </div>
+   </section><!-- Final CTA Section -->
+   <section class="section section-alt">
+    <div class="content-container text-center">
+     <h2 id="final-cta-headline" class="serif" style="font-size: 3.5rem;">Clarity Changes Everything.</h2>
+     <p class="subtitle" style="font-size: 1.3rem; max-width: 800px; margin: 2rem auto;">If you're a founder or decision-maker who wants to think clearly before investing in growth, I'm always open to a conversation.</p>
+     <p class="tagline" style="font-size: 1.2rem; margin: 2rem 0;">No pressure. No pitch. Just perspective.</p><a href="tel:+917973409085" class="phone-badge" style="font-size: 1.2rem; margin: 2rem 0;">
+      <svg class="phone-icon" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      </svg><span>+91 797 340 9085</span> </a>
+     <div class="mt-4"><a href="https://calendly.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.1rem;">Start a Conversation</a>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer>
+    <p class="serif" style="font-size: 2rem; margin-bottom: 1rem; background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-pink) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Nidhi</p>
+    <p style="color: #8b949e; margin-bottom: 2rem;">Clarity-First Growth Consultant</p>
+    <div class="footer-links"><a href="tel:+917973409085" class="footer-link">📞 +91 797 340 9085</a> <a href="https://www.linkedin.com/in/nidhi-bde/" target="_blank" rel="noopener noreferrer" class="footer-link">💼 LinkedIn</a> <a href="mailto:nidhi@example.com" class="footer-link">✉️ Email</a>
+    </div>
+    <p style="color: #8b949e; font-size: 0.9rem; margin-top: 2rem;">© 2024 Nidhi. Built with clarity and intention.</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      bg_dark: "#0d1117",
+      bg_card: "#161b22",
+      text_primary: "#f0f6fc",
+      accent_cyan: "#58d5e8",
+      accent_pink: "#ff6b9d",
+      font_family: "Outfit",
+      font_size: 16,
+      hero_headline: "Helping Founders Find Clarity Before They Invest in Growth",
+      hero_subheadline: "I work with founders and decision-makers who feel overwhelmed by noise, opinions, and sales pitches — and help them identify what truly blocks growth before spending time or money.",
+      hero_tagline: "Clarity-first conversations. No pressure. No pitches. Just perspective.",
+      contact_number: "+91 797 340 9085",
+      about_title: "Why Most Growth Efforts Fail (And Why Clarity Comes First)",
+      role_title: "My Role in Your Growth Journey",
+      who_title: "Who This Is For",
+      values_title: "What I Care About",
+      final_cta_headline: "Clarity Changes Everything.",
+      primary_cta_text: "Book a Clarity Call",
+      secondary_cta_text: "Let's Talk"
+    };
+
+    async function onConfigChange(config) {
+      const baseFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      
+      // Apply colors
+      document.documentElement.style.setProperty('--bg-dark', config.bg_dark || defaultConfig.bg_dark);
+      document.documentElement.style.setProperty('--bg-card', config.bg_card || defaultConfig.bg_card);
+      document.documentElement.style.setProperty('--text-primary', config.text_primary || defaultConfig.text_primary);
+      document.documentElement.style.setProperty('--accent-cyan', config.accent_cyan || defaultConfig.accent_cyan);
+      document.documentElement.style.setProperty('--accent-pink', config.accent_pink || defaultConfig.accent_pink);
+      
+      // Apply fonts
+      document.body.style.fontFamily = `${baseFont}, sans-serif`;
+      document.body.style.fontSize = `${baseSize}px`;
+      
+      // Update text content
+      const heroHeadline = document.getElementById('hero-headline');
+      if (heroHeadline) heroHeadline.textContent = config.hero_headline || defaultConfig.hero_headline;
+      
+      const heroSubheadline = document.getElementById('hero-subheadline');
+      if (heroSubheadline) heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+      
+      const heroTagline = document.getElementById('hero-tagline');
+      if (heroTagline) heroTagline.textContent = config.hero_tagline || defaultConfig.hero_tagline;
+      
+      const contactNumber = document.getElementById('contact-number');
+      if (contactNumber) contactNumber.textContent = config.contact_number || defaultConfig.contact_number;
+      
+      const aboutTitle = document.getElementById('about-title');
+      if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+      
+      const roleTitle = document.getElementById('role-title');
+      if (roleTitle) roleTitle.textContent = config.role_title || defaultConfig.role_title;
+      
+      const whoTitle = document.getElementById('who-title');
+      if (whoTitle) whoTitle.textContent = config.who_title || defaultConfig.who_title;
+      
+      const valuesTitle = document.getElementById('values-title');
+      if (valuesTitle) valuesTitle.textContent = config.values_title || defaultConfig.values_title;
+      
+      const finalCtaHeadline = document.getElementById('final-cta-headline');
+      if (finalCtaHeadline) finalCtaHeadline.textContent = config.final_cta_headline || defaultConfig.final_cta_headline;
+      
+      const primaryCta = document.getElementById('primary-cta');
+      if (primaryCta) primaryCta.textContent = config.primary_cta_text || defaultConfig.primary_cta_text;
+      
+      const secondaryCta = document.getElementById('secondary-cta');
+      if (secondaryCta) secondaryCta.textContent = config.secondary_cta_text || defaultConfig.secondary_cta_text;
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.bg_dark || defaultConfig.bg_dark,
+            set: (value) => {
+              config.bg_dark = value;
+              window.elementSdk.setConfig({ bg_dark: value });
+            }
+          },
+          {
+            get: () => config.bg_card || defaultConfig.bg_card,
+            set: (value) => {
+              config.bg_card = value;
+              window.elementSdk.setConfig({ bg_card: value });
+            }
+          },
+          {
+            get: () => config.text_primary || defaultConfig.text_primary,
+            set: (value) => {
+              config.text_primary = value;
+              window.elementSdk.setConfig({ text_primary: value });
+            }
+          },
+          {
+            get: () => config.accent_cyan || defaultConfig.accent_cyan,
+            set: (value) => {
+              config.accent_cyan = value;
+              window.elementSdk.setConfig({ accent_cyan: value });
+            }
+          },
+          {
+            get: () => config.accent_pink || defaultConfig.accent_pink,
+            set: (value) => {
+              config.accent_pink = value;
+              window.elementSdk.setConfig({ accent_pink: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            config.font_family = value;
+            window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            config.font_size = value;
+            window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
+        ["hero_subheadline", config.hero_subheadline || defaultConfig.hero_subheadline],
+        ["hero_tagline", config.hero_tagline || defaultConfig.hero_tagline],
+        ["contact_number", config.contact_number || defaultConfig.contact_number],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["role_title", config.role_title || defaultConfig.role_title],
+        ["who_title", config.who_title || defaultConfig.who_title],
+        ["values_title", config.values_title || defaultConfig.values_title],
+        ["final_cta_headline", config.final_cta_headline || defaultConfig.final_cta_headline],
+        ["primary_cta_text", config.primary_cta_text || defaultConfig.primary_cta_text],
+        ["secondary_cta_text", config.secondary_cta_text || defaultConfig.secondary_cta_text]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1d90474137e334',t:'MTc2OTA2OTMwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
